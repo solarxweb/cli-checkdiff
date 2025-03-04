@@ -8,10 +8,8 @@ const outputViews = (data, format) => {
       return plainView(data);
     case format === 'json':
       return jsonView(data);
-    case format === 'stylish':
-      return stylishView(data);
     default:
-      throw new Error('specified fromat doesn\'nt support');
+      return stylishView(data);
   }
 };
 export default outputViews;
